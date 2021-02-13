@@ -7,6 +7,23 @@
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
 <head>
 <body>
+        <script type="text/javascript">
+        function submitForm() {
+            var formData = {
+                Username: $("#Username").val(),
+                Password: $("#Password").val(),
+            };
+            $.ajax({
+                url: "http://localhost:5000/api/Accounts/Login",
+                data: JSON.stringify(formData),
+                contentType: "application/json;charset=utf-8",
+                method: "POST"
+            }).done(function(data) {
+                window.localStorage.setItem("token", data.content);
+                alert("submitted!");
+            });
+        }
+    </script>
     <nav class="navbar" id = "navbar">
         <div class="container-fluid">
             <div class="navbar-header">

@@ -14,6 +14,9 @@ function submitForm() {
 		url: "http://localhost:5000/api/Products/Add",
 		data: JSON.stringify(formData),
         contentType: "application/json;charset=utf-8",
+        beforeSend: function(xhr){
+          xhr.setRequestHeader("Authorization", "Bearer " + window.localStorage.getItem("token"))  
+        },
 		method: "POST"
 	}).done(function(data) {
 		alert("submitted!");
