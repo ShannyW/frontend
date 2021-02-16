@@ -1,5 +1,6 @@
-.h1 {
-    font-family:'Merriweather', serif;
+.logo{
+    width: 23%;
+    margin-top: -4%;
 }
 .navbar {
     width: 100%
@@ -21,6 +22,10 @@
 .navbar a:hover{
     color: #585858;
 }
+.search-box{
+    display: inline-flex;
+    width: 40%;
+}
 .jumbotron {
     margin-bottom: 0;
     background: url("jumbotron.png") center center / cover no-repeat;
@@ -28,7 +33,6 @@
 .panel-primary {
     background-color: white !important;
     border-color: white !important;
-    height: ;
 }
 .panel-primary > .panel-heading {
     font-style: oblique;

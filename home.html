@@ -1,19 +1,20 @@
 <!DOCTYPE html>
 <html>
 <head>
-<link rel="stylesheet" href="stylesheet.css">
+    <link rel = "icon" href = "Logo.png">
+    <title>MyBroidery</title>
+    <link rel="stylesheet" href="stylesheet.css">
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
-    <link rel = "icon" href = "Logo.png">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <link rel="stylesheet" href = "https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
 </head>
 <body>
-  <title>MyBroidery</title>
 <div class="jumbotron">
   <div class="container text-center"> 
-      <img src="Logo.png" alt="MyBroideryLogo" style="width: 23%; margin-top: -4%;">
+      <img src="Logo.png" class = "logo" alt="MyBroideryLogo">
     </div>
 <nav class="navbar" id = "navbar">
   <div class="container-fluid">
@@ -29,8 +30,8 @@
         <li><a href="home.html">Home</a></li>
           <li><a href="#" class = "dropdown" id = "dropdownMenuButton" data-toggle = "dropdown" aria-haspopup="true" aria-expanded="false">Shop▾</a>
             <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-                <a class="dropdown-item" href="hoops.html">Hoops</a>
-                <a class="dropdown-item" href="canvas.html">Canvases</a>
+                <a class="dropdown-item" href="homedecor.html">Home Decor</a>
+                <a class="dropdown-item" href="clothing.html">Clothing</a>
                 <a class="dropdown-item" href="baby.html">Baby</a>
                 <a class="dropdown-item" href="pet.html">Pet Accessories</a>
             </div>
@@ -39,6 +40,7 @@
           <li><a href="about.html">About</a></li>
         </ul>
         <ul class="nav navbar-nav navbar-right">
+            <li><a onclick = ""><span class = "glyphicon glyphicon-search"></span> Search</a></li>
             <li><a href="createlogin.html"><span class="glyphicon glyphicon-user"></span> Your Account</a></li>
             <li><a href="cart.html"><span class="glyphicon glyphicon-shopping-cart"></span> Cart</a></li>
         </ul>

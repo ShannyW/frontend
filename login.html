@@ -23,6 +23,18 @@
                 alert("submitted!");
             });
         }
+            window.onload = function(){
+                $.ajax({
+                url: "http://localhost:5000/api/Accounts/Me",
+                contentType: "application/json;charset=utf-8",
+                beforeSend: function(xhr){
+                  xhr.setRequestHeader("Authorization", "Bearer " + window.localStorage.getItem("token"));
+                },
+                method: "GET"
+            }).done(function(data) {
+                    $("#UsernameLabel").html(data.username);
+            });
+            }
     </script>
     <nav class="navbar" id = "navbar">
         <div class="container-fluid">
@@ -49,7 +61,7 @@
                     <li><a href="#">Contact</a></li>
                 </ul>
                 <ul class="nav navbar-nav navbar-right">
-                    <li><a href="#"><span class="glyphicon glyphicon-user"></span> Your Account</a></li>
+                    <li><a href="#"><span class="glyphicon glyphicon-user"></span><label id = "UsernameLabel"></label> Account</a></li>
                     <li><a href="#"><span class="glyphicon glyphicon-shopping-cart"></span> Cart</a></li>
                 </ul>
             </div>

@@ -27,7 +27,10 @@
 window.onload = function(){
 $.ajax({
     method: "GET",
-    url: "http://localhost:5000/api/Accounts"
+    url: "http://localhost:5000/api/Accounts",
+    beforeSend: function(xhr){
+        xhr.setRequestHeader("Authorization", "Bearer " + window.localStorage.getItem("token"));
+    }
 }).done(function(data) {
     var receivedData = data;//we're expecting JSON.
     var resultHTML = "<tr><th>Username</th><th>Password</th></tr>";
