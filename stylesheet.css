@@ -22,12 +22,18 @@
 .navbar a:hover{
     color: #585858;
 }
+.navbar a:active{
+    color: black;
+}
 .search-box{
     display: inline-flex;
     width: 40%;
 }
+.form-group{
+     font-family: 'Merriweather', serif; 
+    font-size: 20px;
+}
 .jumbotron {
-    margin-bottom: 0;
     background: url("jumbotron.png") center center / cover no-repeat;
 }
 .panel-primary {
@@ -46,4 +52,16 @@
     background-color: white !important;
     font-family:'Merriweather', serif;
     font-size: 20px;
+}
+input[type=text] {
+  width: 145px;
+    border: none;
+    margin-bottom: -10px
+        -webkit-transition: width 0.2s ease-in-out;
+    transition: width 0.2s ease-in-out;
+}
+
+/* When the input field gets focus, change its width to 100% */
+input[type=text]:focus {
+  width: 90%;
 }
